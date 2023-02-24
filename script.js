@@ -56,10 +56,16 @@ function playerSelection(playersChoice){
 function won(){
     endresult.textContent = "The battle is over! We have won!";
     reset.style.display = "block";
+    buttons.forEach(function(item){
+        item.disabled = true;
+    });
 }
 function lost(){
     endresult.textContent = "The battle is over! We have lost!";
     reset.style.display = "block";
+    buttons.forEach(function(item){
+        item.disabled = true;
+    });
 }
 
 function roundOfRps(playerSelection, computerChoice){
@@ -93,6 +99,9 @@ reset.addEventListener("click", event => {
     endresult.textContent = "";
     result.textContent = "";
     reset.style.display = "none";
+    buttons.forEach(function(item){
+        item.disabled = false;
+    });
 });
 
 /*
