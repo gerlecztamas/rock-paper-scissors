@@ -1,3 +1,5 @@
+// Implementing the beginning of the page and getting the required elements
+
 let pscore = 0;
 let cscore = 0;
 
@@ -16,10 +18,14 @@ let endresult = document.querySelector(".endresult");
 
 let reset = document.querySelector(".reset");
 
+// if play button clicked, the game starts and the played elements show up
+
 play.addEventListener("click", event => {
     begin.style.display = "none";
     game.style.display = "block";
 });
+
+// starting a round of rock, paper, scissors each time an icon is clicked, the result is displayed on screen
 
 let choices = document.querySelectorAll(".choice");
 choices.forEach(function(item){
@@ -28,6 +34,8 @@ choices.forEach(function(item){
         result.textContent = roundOfRps(playersChoice, getComputerChoice());
     })
 });
+
+// returning the choice of the player as a lowercase string for easier comparison
 
 function playerSelection(playersChoice){
     
@@ -40,6 +48,8 @@ function playerSelection(playersChoice){
         return playerSelection();
     }
 }
+
+// returning the choice of the computer using a random number generator
 
 function getComputerChoice(){
     let computerNumber = Math.floor(Math.random() * (3-1+1) + 1);
@@ -54,6 +64,9 @@ function getComputerChoice(){
     }
 }
 
+// playing a round of rock, paper scissors
+// the result of each round is displayed with the points increasing (if it's a tie the points won't change)
+// once a player reaches 5 points the game ends and the end result is displayed using the won() and lost() functions
 function roundOfRps(playerSelection, computerChoice){
     let standing = "";
     if ((playerSelection === "rock" && computerChoice === "scissors") || (playerSelection === "paper" && computerChoice === "rock") || (playerSelection === "scissors" && computerChoice === "paper")){
@@ -62,7 +75,6 @@ function roundOfRps(playerSelection, computerChoice){
         if (pscore === 5){
             won();
         }
-        console.log(pscore, cscore);
         standing = `You: ${pscore} - Computer: ${cscore}`;
         standings.textContent = standing;
         return "Your point! " + playerSelection + " beats " + computerChoice;
@@ -73,7 +85,6 @@ function roundOfRps(playerSelection, computerChoice){
         if(cscore === 5){
             lost();
         }
-        console.log(pscore, cscore);
         standing = `You: ${pscore} - Computer: ${cscore}`;
         standings.textContent = standing;
         return "Computers point! " + computerChoice + " beats " + playerSelection;
@@ -83,6 +94,8 @@ function roundOfRps(playerSelection, computerChoice){
         return "Tie!";
     }
 }
+
+// ending the game and disabling the choices
 
 function won(){
     endresult.textContent = "Congratulations! You have won!";
@@ -98,6 +111,8 @@ function lost(){
         item.style.pointerEvents = "none";
     });
 }
+
+// if the play again button is clicked (even during the game) all records are reset and the game starts over
 
 reset.addEventListener("click", event => {
     pscore = 0;

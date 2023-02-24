@@ -3,7 +3,7 @@
     src: url(FjallaOne-Regular.ttf);
  }
  
-
+/* Default styles and home page */
 body{
     margin: 0;
     padding: 0;
@@ -44,6 +44,7 @@ body{
     cursor: pointer;
 }
 
+/* Styles after the game has started */
 
 .choices{
     display: flex;
@@ -72,4 +73,9 @@ body{
 
 .standings{
     margin-bottom: 60px;
+}
+
+.reset{
+    width: fit-content;
+    margin: auto;
 }
