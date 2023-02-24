@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/style.css">
     <title>Document</title>
 </head>
 <body>
+    <!--
     <button id="rock" class="choices">Rock</button>
     <button id="paper" class="choices">Paper</button>
     <button id="scissors" class="choices">Scissors</button>
     <button id="reset">Reset</button>
-    <script src="script.js"></script>
+    -->
+    <div class="container">
+        <h1>Rock, paper, scissors</h1>
+        <div class="begin">
+            <p>Welcome to my rock, paper, scissors game! You think you can beat your own computer? Come and find out!</p>
+            <span id="play">Play</span>
+        </div>
+        <div class="game">
+            <div class="choices">
+                <div class="choice rock">Rock</div>
+                <div class="choice paper">Paper</div>
+                <div class="choice scissors">Scissors</div>
+            </div>
+            <div class="result">Your point!</div>
+            <div class="standings">
+                You: 1 - Computer: 2
+            </div>
+            <div class="endresult">
+                <h2>Congratulations! You have won!</h2>
+            </div>
+            <div class="reset">
+                <span id="reset">Play again!</span>
+            </div>
+        </div>
+    </div>
+    <script src="res/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/*
 function getComputerChoice(){
     let computerNumber = Math.floor(Math.random() * (3-1+1) + 1);
     if (computerNumber === 1){
@@ -42,7 +43,7 @@ buttons.forEach(function(item){
 
 
 function playerSelection(playersChoice){
-    /*let playersChoice = prompt("Enter your choice!");*/
+    
     playersChoice = playersChoice.toLowerCase();
     if (playersChoice === "rock" || playersChoice === "paper" || playersChoice == "scissors"){
         return playersChoice;
@@ -103,6 +104,7 @@ reset.addEventListener("click", event => {
         item.disabled = false;
     });
 });
+*/
 
 /*
 function game(){
@@ -138,3 +140,13 @@ function game(){
     }
 }
 */
+let game = document.querySelector(".game");
+game.style.display = "none";
+let play = document.getElementById("play");
+let begin = document.querySelector(".begin");
+play.addEventListener("click", event => {
+    begin.style.display = "none";
+    game.style.display = "block";
+});
+
+

@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Fjalla-One;
+    src: url(FjallaOne-Regular.ttf);
+ }
+ 
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #404258;
+    color: #a0a6bb;
+    font-size: 24px;
+    font-family: Fjalla-One;
+    letter-spacing: 3px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.container h1{
+    font-size: 48px;
+    margin-bottom: 75px;
+}
+
+.container p{
+    margin-bottom: 75px;
+}
+
+.container span{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    border: 2px solid #a0a6bb;
+    padding: 16px 28px;
+    border-radius: 10px;
+}
+
+.container span:hover{
+    background-color: #a0a6bb;
+    color: #404258;
+    cursor: pointer;
+}
+
+
+.choices{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 75px;
+}
+
+.choice{
+    border: 2px solid #a0a6bb;
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    line-height: 150px;
+}
+
+.choice:hover{
+    background-color: #a0a6bb;
+    color: #404258;
+    cursor: pointer;
+}
+
+.result{
+    margin-bottom: 40px;
+}
+
+.standings{
+    margin-bottom: 60px;
+}
